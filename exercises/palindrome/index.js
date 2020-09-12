@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // --- Directions
 // Given a string, return true if the string is a palindrome
 // or false if it is not.  Palindromes are strings that
@@ -7,6 +8,17 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+// najpriamejsie riesenie s vyuzitim fc. reverse()
+function palindrome(str) {
+  var rev = str.split("").reverse().join("");
+  return str == rev;
+}
+
+// every() - testuje kazdy element z pola, char - element,  i - aktualny index
+function palindrome2(str) {
+  return str.split("").every((char, i) => {
+    return char == str[str.length - i - 1];
+  });
+}
 
 module.exports = palindrome;
