@@ -12,7 +12,10 @@ class Stack {
   }
 
   peek() {
-    return this.data[this.data.length - 1];
+    if (this.data.length > 0) {
+      return this.data[this.data.length - 1];
+    }
+    return null;
   }
 }
 
