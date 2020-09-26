@@ -20,7 +20,7 @@
 // ktore sa menili kazdym kolekcom, resp. zmenou smeru
 function matrix(n) {
   const result = Array();
-  for (i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {
     result.push(Array(n));
   }
   const smer = ['vpravo', 'dole', 'vlavo', 'hore'];
@@ -31,7 +31,7 @@ function matrix(n) {
   let maxrow = n;
   let mincol = 0;
   let maxcol = n;
-  for (i = 0; i < n * n; i++) {
+  for (let i = 0; i < n * n; i++) {
     result[rowindex][colindex] = i + 1;
     //console.log(i, rowindex, colindex);
 
